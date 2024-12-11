@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "7c114d10-7d7d-4dc2-a045-3638b163d875",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18391291",
+		"_collection_link": "https://www.postman.com/feliblanco/final-piii/collection/18391291-7c114d10-7d7d-4dc2-a045-3638b163d875?action=share&source=collection_link&creator=18391291"
+	},
+	"item": [
+		{
+			"name": "Obtiene un usuario por su id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"3"
+					]
+				},
+				"description": "Obtiene un usuario a través de su ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Felipe\",\r\n    \"correo\": \"felipeblanco@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "Crea un nuevo usuario en la base de datos."
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"3"
+					]
+				},
+				"description": "Borra un usuario a través de su ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"3"
+					]
+				},
+				"description": "Modifica la información del usuario a través de su ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Obtiene todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user?page=1&rowPerPage=15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "rowPerPage",
+							"value": "15"
+						}
+					]
+				},
+				"description": "Obtiene una lista de usuarios registrado con paginado."
+			},
+			"response": []
+		}
+	]
+}

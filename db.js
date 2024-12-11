@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+const MONGO_URI = process.env.MONGO_URI;
+
 mongoose
-.connect('mongodb://127.0.0.1:27017/finalPIII')
+.connect(MONGO_URI)
 .then(() => console.log('Base de datos conectada!'));

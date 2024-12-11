@@ -3,6 +3,7 @@ const Usuario = require("../../models/usuarios")
 const updateUser = async(req, res) => {
     try {
         const body = req.body;
+        const id = req.params.id;
         let data_update = {};
 
         if("nombre" in body) {

@@ -2,16 +2,16 @@ const Usuario = require("../../models/usuarios");
 
 const getUsers = async(req, res) => {
     try {
-        const page = req.query.page || 0;
-        const rowPerPage = req.query.rowPerPage || 10;
+        const page = parseInt(req.query.page || 0);
+        const rowsPerPage = parseInt(req.query.rowsPerPage || 10);
 
-        const skip = page * rowPerPage;
+        const skip = page * rowsPerPage;
         const count = await Usuario.countDocuments()
-        const result = await Usuario.find().skip(skip).limit(rowPerPage);
+        const result = await Usuario.find().skip(skip).limit(rowsPerPage);
 
         res.send({
             page,
-            rowPerPage,
+            rowsPerPage,
             data: result,
             count
         });

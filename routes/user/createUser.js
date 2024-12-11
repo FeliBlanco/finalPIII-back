@@ -7,12 +7,18 @@ const createUser = async(req, res) => {
 
         const {
             nombre,
-            correo
+            correo,
+            fecha_nacimiento,
+            direccion,
+            telefono
         } = req.body;
 
         const new_user = new Usuario({
             nombre,
-            correo
+            correo,
+            fecha_nacimiento,
+            direccion,
+            telefono
         })
         const result_new_user = await new_user.save();
         res.status(201).send(result_new_user)
